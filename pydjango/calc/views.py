@@ -15,3 +15,14 @@ def add(request):
     sum = val1 + val2
 
     return render(request, "result.html", {"result": sum})
+
+
+# Function to multiply two numbers and send result to results page
+def multiply(request):
+
+    val1 = int(request.POST["num1"])
+    val2 = int(request.POST["num2"])
+
+    product = val1 * val2
+
+    return render(request, "result.html", {"result": product})
