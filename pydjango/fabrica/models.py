@@ -10,3 +10,4 @@ class Product:
     rating: float
     img: str
     price: int
+    offer: bool
