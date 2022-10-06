@@ -110,9 +110,13 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="col-md-4">
           <div class="product-item">
             <a href="#"><img src="{{baseURL}}/{{product.img}}" alt=""></a>
+
+            {% if product.offer %}
             <div class="spec_offer text-center"><a href="#">
                 <font color=red> Special Offer </font>
               </a></div>
+            {% endif %}
+
             <div class="down-content">
               <a href="#">
                 <h4>{{product.name}}</h4>
