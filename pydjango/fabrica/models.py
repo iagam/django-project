@@ -3,11 +3,11 @@ from django.db import models
 # Create your models here.
 
 
-class Product:
-    id: int
-    name: str
-    desc: str
-    rating: float
-    img: str
-    price: int
-    offer: bool
+class Product(models.Model):
+
+    name = models.CharField(max_length=100)
+    desc = models.TextField()
+    rating = models.FloatField()
+    img = models.ImageField(upload_to="pics")
+    price = models.IntegerField()
+    offer = models.BooleanField(default=False)
