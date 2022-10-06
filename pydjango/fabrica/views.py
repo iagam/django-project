@@ -12,6 +12,7 @@ def index(request):
     product1.price = 40
     product1.rating = 4.98
     product1.img = "product_01.jpg"
+    product1.offer = False
 
     product2 = Product()
     product2.name = "Jackets"
@@ -19,6 +20,7 @@ def index(request):
     product2.price = 75
     product2.rating = 4.8
     product2.img = "product_02.jpg"
+    product2.offer = True
 
     product3 = Product()
     product3.name = "Scarves"
@@ -26,6 +28,7 @@ def index(request):
     product3.price = 10
     product3.rating = 4.9
     product3.img = "product_03.jpg"
+    product3.offer = False
 
     products = [product1, product2, product3]
 
