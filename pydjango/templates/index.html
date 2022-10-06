@@ -1,4 +1,6 @@
 {% load static %}
+
+{% static 'assets/images' as baseURL %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -103,48 +105,24 @@ https://templatemo.com/tm-546-sixteen-clothing
             <h2>New Arrivals</h2>
           </div>
         </div>
+        <!-- PRODUCT -->
+        {% for product in products %}
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="{% static 'assets/images/product_01.jpg' %}" alt=""></a>
+            <a href="#"><img src="{{baseURL}}/{{product.img}}" alt=""></a>
             <div class="down-content">
               <a href="#">
-                <h4>Outdoor Shoes</h4>
+                <h4>{{product.name}}</h4>
               </a>
-              <h6>From $30</h6>
-              <p>Utmost comfort, protection and resilience</p>
+              <h6>From ${{product.price}}</h6>
+              <p>{{product.desc}}</p>
               <br>
-              <span>Ratings 4.8</span>
+              <span>Ratings {{product.rating}}</span>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="#"><img src="{% static 'assets/images/product_02.jpg' %}" alt=""></a>
-            <div class="down-content">
-              <a href="#">
-                <h4>Outerwear</h4>
-              </a>
-              <h6>From $50</h6>
-              <p>Step out in style</p>
-              <br>
-              <span>Ratings 4.95</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="product-item">
-            <a href="#"><img src="{% static 'assets/images/product_03.jpg' %}" alt=""></a>
-            <div class="down-content">
-              <a href="#">
-                <h4>Winterwear</h4>
-              </a>
-              <h6>From $20</h6>
-              <p>Stay warm. Stay safe.</p>
-              <br>
-              <span>Ratings 4.85</span>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
+        <!-- PRODUCT -->
       </div>
     </div>
   </div>
