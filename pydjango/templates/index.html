@@ -109,7 +109,7 @@ https://templatemo.com/tm-546-sixteen-clothing
         {% for product in products %}
         <div class="col-md-4">
           <div class="product-item">
-            <a href="#"><img src="{{baseURL}}/{{product.img}}" alt=""></a>
+            <a href="#"><img src="{{product.img.url}}" alt=""></a>
 
             {% if product.offer %}
             <div class="spec_offer text-center"><a href="#">
