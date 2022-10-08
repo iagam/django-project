@@ -19,6 +19,11 @@
         Re-enter Password : <input type="password" name="confirm_password" placeholder="Confirm Password"><br>
         <input style="color:#fff;background-color: #0d6efd;" type="submit" value="Register">
     </form>
+    <div>
+        {% for message in messages %}
+        <h4> {{message}} </h4>
+        {% endfor %}
+    </div>
 </body>
 
 </html>
